@@ -16,3 +16,8 @@ body {
   color: white;
   padding: 3px;
 }
+
+.guessSubmit {
+  color: white;
+  background: rgb(59, 201, 230);
+}
