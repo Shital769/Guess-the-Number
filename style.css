@@ -1,0 +1,18 @@
+html {
+  font-family: serif;
+}
+body {
+  width: 50%;
+  min-width: 480px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form input[type="number"] {
+  width: 200px;
+}
+
+.lastResult {
+  color: white;
+  padding: 3px;
+}
