@@ -9,6 +9,7 @@ const guessField = document.querySelector(".guessField");
 
 let guessCount = 1;
 let resetButton;
+guessField.focus();
 
 function checkGuess() {
   const userGuess = Number(guessField.value);
@@ -18,10 +19,15 @@ function checkGuess() {
   }
 
   guesses.textContent += `${userGuess} `;
+  guesses.style.backgroundColor = "yellow";
+  guesses.style.boxShadow = "3px 3px 6px black";
+  guesses.style.fontSize = "150%";
 
   if (userGuess === randomNumber) {
     lastResult.textContent = "Congratulations! You got it right!";
     lastResult.style.backgroundColor = "green";
+    lastResult.style.boxShadow = "3px 3px 6px black";
+
     lowOrHigh.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
@@ -31,12 +37,18 @@ function checkGuess() {
   } else {
     lastResult.textContent = "Wrong";
     lastResult.style.backgroundColor = "red";
+    lastResult.style.fontSize = "160%";
+    lastResult.style.boxShadow = "3px 3px 6px black";
     if (userGuess < randomNumber) {
       lowOrHigh.textContent = "Last guess was too low!";
-      lowOrHigh.style.backgroundColor = "aliceblue"
+      lowOrHigh.style.fontSize = "100%";
+      lowOrHigh.style.backgroundColor = "aliceblue";
+      lowOrHigh.style.boxShadow = "3px 3px 6px black";
     } else if (userGuess > randomNumber) {
       lowOrHigh.textContent = "Last guess was too high!";
-      lowOrHigh.style.backgroundColor = "lightblue"
+      lowOrHigh.style.backgroundColor = "lightblue";
+      lowOrHigh.style.fontSize = "120%";
+      lowOrHigh.style.boxShadow = "3px 3px 6px black";
     }
   }
 
