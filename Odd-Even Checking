@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Test 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preview"></section>
+
+    <script>
+      let finalResult;
+      let evenOddResult;
+
+      const num1 = 5;
+      const num2 = 7;
+      const num3 = 15;
+      const num4 = 11;
+
+      const addition = num1 + num2;
+      const subtraction = num3 - num4;
+      finalResult = addition * subtraction;
+
+//checking if final result is odd or an even number.
+      evenOddResult = finalResult % 2;
+      
+
+      const section = document.querySelector("section");
+
+      const para1 = document.createElement("p");
+      const finalResultCheck =
+        finalResult === 48 ? `Yes, well done!` : `No, it is ${finalResult}`;
+      para1.textContent = `Is the finalResult 48? ${finalResultCheck}`;
+      const para2 = document.createElement("p");
+      const evenOddResultCheck =
+        evenOddResult === 0
+          ? "The final result is even"
+          : "The final result is odd.Hrm";
+      para2.textContent = evenOddResultCheck;
+
+      section.appendChild(para1);
+      section.appendChild(para2);
+    </script>
+  </body>
+</html>
