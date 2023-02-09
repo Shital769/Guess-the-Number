@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Test 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Requirements: Multiply result and result2 and assign the result back to result (use assignment shorthand).
+Format result so that it has two decimal places and store it in a variable called finalResult.
+Check the data type of finalResult using typeof. If it's a string, convert it to a number type and store the result in a variable called finalNumber.
+Update the original calculation so that they give you a value of 10.42. Don't change the numbers or the operators. -->
+    <section class="preview"></section>
+  </body>
+
+  <script>
+    //Final result should be 10.42
+    // let isNan;
+    let result = 7 + 13 / 9 + 7;
+    let result2 = (100 / 2) * 6;
+    result *= result2;
+
+    finalResult = result.toFixed(2);
+    const finalNumber = Number(finalResult);
+    const section = document.querySelector("section");
+
+    const para1 = document.createElement("p");
+    para1.textContent = `Your finalResult is ${finalResult}`;
+
+    const para2 = document.createElement("p");
+    const finalNumberCheck =
+      isNaN(finalNumber) === false
+        ? "finalNumber is a number type. Well done!"
+        : "Oops! finalNumber is not a number.";
+    para2.textContent = finalNumberCheck;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+</html>
